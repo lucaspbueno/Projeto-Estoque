@@ -15,12 +15,12 @@ Para acessar o projeto em seu navegaor, basta apenas acessar o link abaixo:
 ## Pela sua máquina:
 Para acessar o projeto em sua máquina, basta apenas seguir os passos a baixo:
 - Acesse o terminal e digite o comando:
-  -git clone https://github.com/lucaspbueno/Projeto-Estoque.git
+  - git clone https://github.com/lucaspbueno/Projeto-Estoque.git
   - Se o git do seu pc estiver configurado para tal, ele irá lhe pedir para que insira seu email e senha do github
 - Acessa o  repositório que foi criado em sua máquina, com o comando:
-  cd Projeto-Estoque
+  - cd Projeto-Estoque
 - Baixa as dependências do projeto com o comando:
-  npm install
+  - npm install
 - Agora basta rodar o projeto com o comando:
-  npm start
+  - npm start
 - Para acessar o código fonte ao invés de 'start' utilize o comando 'code .' sem aspas, que o código será aberto em seu vscode.  

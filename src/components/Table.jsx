@@ -39,9 +39,13 @@ export default function Table() {
         <thead>
           <tr className="text-2xl">
             <th></th>
-            <th>Name</th>
+            <th>Nome</th>
             <th>Quantidade</th>
             <th>Valor(R$)</th>
+            <th>Editar</th>
+            <th>Excluir</th>
+            <th>Aumentar</th>
+            <th>Diminuir</th>
           </tr>
         </thead>
         <tbody>
@@ -55,7 +59,7 @@ export default function Table() {
                   <th>{ value }</th>
                   <th>
                     <button type="button" onClick={ () => editProduct(id) }>
-                      <img src={ editIcon } alt="Botão de editar" className="w-8 text-neutral-50" />
+                      <img src={ editIcon } alt="Botão de editar" className="w-11 text-neutral-50" />
                     </button>
                   </th>
                   <th>
@@ -65,7 +69,7 @@ export default function Table() {
                   </th>
                   <th>
                     <button type="button"onClick={ () => incrementProductFunction(id) } >
-                      <img src={ moreIcon } alt="Botão para incrementar" className="w-11 text-white" />
+                      <img src={ moreIcon } alt="Botão para incrementar" className="w-11 text-neutral-50" />
                     </button>
                   </th>
                   <th>

@@ -24,13 +24,17 @@ export default function Header() {
               </div>
             </div>
           </label>
-          <ul tabIndex={0} className="mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
+          <ul tabIndex={0} className="bg-black mt-3 z-[1] p-2 shadow menu menu-sm dropdown-content bg-base-100 rounded-box w-52">
             <li>
               <button type="button" className="justify-between" onClick={ () => history.push('/profile') }>
                 Profile
               </button>
             </li>
-            <li><button type="submit" onClick={ () => history.push('/') }>Logout</button></li>
+            <li>
+              <button type="submit" onClick={ () => history.push('/') }>
+                Logout
+              </button>
+            </li>
           </ul>
         </div>
       </div>

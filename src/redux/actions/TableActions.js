@@ -4,6 +4,7 @@ export const UPDATE_ID_TO_EDIT = 'UPDATE_ID_TO_EDIT';
 export const DELETE_PRODUCT = 'DELETE_PRODUCT';
 export const INCREMENT_PRODUCT = 'INCREMENT_PRODUCT';
 export const DECREMENT_PRODUCT = 'DECREMENT_PRODUCT';
+export const FILTER_PRODUCTS = 'FILTER_PRODUCTS';
 
 export const addProduct = (payload) => ({
   type: ADD_PRODUCT,
@@ -33,4 +34,9 @@ export const decrementProduct = (id) => ({
 export const incrementProduct = (id) => ({
   type: INCREMENT_PRODUCT,
   id
+});
+
+export const filterProducts = (payload) => ({
+  type: FILTER_PRODUCTS,
+  payload
 });

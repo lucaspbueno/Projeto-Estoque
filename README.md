@@ -3,7 +3,7 @@
   create-react-app, para estilo da página foi usado o daisyUi e o Tailwind,
   para as rotas o React Router e para gerenciar o estado foi utilizado o Redux.
 
-  ** O back-end e o banco de dados dessa aplicação ainda não foi feito.
+  ** O back-end e o banco de dados dessa aplicação ainda não foram feitos.
 
 # Como iniciar o projeto?
 

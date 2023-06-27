@@ -23,4 +23,4 @@ Para acessar o projeto em sua máquina, basta apenas seguir os passos a baixo:
   - npm install
 - Agora basta rodar o projeto com o comando:
   - npm start
-- Para acessar o código fonte ao invés de 'start' utilize o comando 'code .' sem aspas, que o código será aberto em seu vscode.  
+- Para acessar o código fonte ao invés de 'npm start' utilize o comando 'code .' (sem aspas), que o código será aberto em seu vscode.  

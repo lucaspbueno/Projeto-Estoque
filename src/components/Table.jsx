@@ -33,7 +33,7 @@ export default function Table() {
 
 
   return (
-    <div className="overflow-x-auto w-4/6 mt-8">
+    <div className="overflow-x-auto w-6/6 mt-8">
       <table className="table text-2xl">
         {/* head */}
         <thead>

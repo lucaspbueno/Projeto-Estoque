@@ -34,7 +34,6 @@ export default function Login() {
     dispatch(loginUser(name, email));
     history.push('/home');
   };
-
   return (
     <div className="flex justify-center items-center w-screen h-screen bg-slate-950">
       <form className="flex flex-col justify-center items-center p-16">

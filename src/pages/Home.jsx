@@ -3,7 +3,7 @@ import FormTable from "../components/FormTable";
 import Header from "../components/Header";
 import Table from "../components/Table";
 import Loading from "../components/Loading";
-import Filters from "../components/Filters";
+/* import Filters from "../components/Filters"; */
 
 export default function Home() {
   const [loading, setLoading] = useState(true);

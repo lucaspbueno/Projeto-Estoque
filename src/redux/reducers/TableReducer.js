@@ -1,7 +1,38 @@
-import { ADD_PRODUCT, DECREMENT_PRODUCT, DELETE_PRODUCT, EDIT_PRODUCT, INCREMENT_PRODUCT, UPDATE_ID_TO_EDIT } from '../actions/TableActions.js';
+import { ADD_PRODUCT, DECREMENT_PRODUCT, DELETE_PRODUCT, EDIT_PRODUCT, FILTER_PRODUCTS, INCREMENT_PRODUCT, UPDATE_ID_TO_EDIT } from '../actions/TableActions.js';
 
 const INITIAL_STATE = {
-  estoque: [],
+  estoque: [
+    /* {
+      name:"Rama Bradshaw",
+      quantity:"944",
+      value:"11",
+      id:1
+    },
+    {
+      name:"Computador",
+      quantity:"944",
+      value:"11",
+      id:1
+    },
+    {
+      name:"Pontos",
+      quantity:"944",
+      value:"11",
+      id:1
+    },
+    {
+      name:"Rama Bradshaw",
+      quantity:"944",
+      value:"11",
+      id:1
+    },
+    {
+      name:"Lucas",
+      quantity:"944",
+      value:"11",
+      id:1
+    } */
+  ],
   idToEdit: 0,
 };
 
@@ -86,7 +117,12 @@ const tableReducer = (state = INITIAL_STATE, action) => {
       return state = {
         ...state,
         estoque: estoqueIncrementado
-      }
+      };
+      case FILTER_PRODUCTS:
+        return state = {
+          ...state,
+          estoque: action.payload
+        }
     default:
       return state;
   }

@@ -1,4 +1,4 @@
-import { ADD_PRODUCT, DELETE_PRODUCT, EDIT_PRODUCT, UPDATE_ID_TO_EDIT } from '../actions/TableActions.js';
+import { ADD_PRODUCT, DECREMENT_PRODUCT, DELETE_PRODUCT, EDIT_PRODUCT, INCREMENT_PRODUCT, UPDATE_ID_TO_EDIT } from '../actions/TableActions.js';
 
 const INITIAL_STATE = {
   estoque: [],
@@ -19,8 +19,6 @@ const tableReducer = (state = INITIAL_STATE, action) => {
         ]
       };
       case DELETE_PRODUCT:
-        console.log('Delete');
-        console.log(action);
         const estoqueFiltrado = state.estoque
           .filter((el) => el.id !== action.id);
         const estoqueComIdsAtualizados = estoqueFiltrado
@@ -56,6 +54,38 @@ const tableReducer = (state = INITIAL_STATE, action) => {
       return state = {
         ...state,
         idToEdit: action.idToEdit
+      }
+      case DECREMENT_PRODUCT:
+        const estoqueDecrementado = state.estoque.reduce((acc, el) => {
+          if (el.id === action.id) {
+            let quantityNumber = Number(el.quantity);
+            el = {
+              ...el,
+              quantity: quantityNumber -= 1
+            }
+          }
+          acc.push(el);
+          return acc;
+        }, []);
+      return state = {
+        ...state,
+        estoque: estoqueDecrementado
+      }
+      case INCREMENT_PRODUCT:
+        const estoqueIncrementado = state.estoque.reduce((acc, el) => {
+          if (el.id === action.id) {
+            let quantityNumber = Number(el.quantity);
+            el = {
+              ...el,
+              quantity: quantityNumber += 1
+            }
+          }
+          acc.push(el);
+          return acc;
+        }, []);
+      return state = {
+        ...state,
+        estoque: estoqueIncrementado
       }
     default:
       return state;

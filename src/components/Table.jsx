@@ -1,8 +1,10 @@
 import editIcon from '../iframes/edit.png';
 import deleteIcon from '../iframes/deleteIcon.svg';
+import moreIcon from '../iframes/mais.png';
+import less  from '../iframes/sinal-de-menos.png';
 import { useDispatch, useSelector } from "react-redux";
 import { toogleType } from "../redux/actions/FormActions";
-import { deleteProduct, updateIdToEdit } from "../redux/actions/TableActions";
+import { decrementProduct, deleteProduct, incrementProduct, updateIdToEdit } from "../redux/actions/TableActions";
 import { deleteAction } from '../redux/actions/HistoricActions';
 
 export default function Table() {
@@ -20,6 +22,15 @@ export default function Table() {
     const { name } = productDelete;
     dispatch(deleteAction('delete', name, Date()));
   };
+  
+  const incrementProductFunction = (id) => {
+    dispatch(incrementProduct(id));
+  };
+
+  const decrementProductFunction = (id) => {
+    dispatch(decrementProduct(id));
+  };
+
 
   return (
     <div className="overflow-x-auto w-4/6 mt-8">
@@ -30,7 +41,7 @@ export default function Table() {
             <th></th>
             <th>Name</th>
             <th>Quantidade</th>
-            <th>Valor</th>
+            <th>Valor(R$)</th>
           </tr>
         </thead>
         <tbody>
@@ -48,8 +59,18 @@ export default function Table() {
                     </button>
                   </th>
                   <th>
-                    <button type="button" onClick={ () =>deleteProductFunction(id) }>
+                    <button type="button" onClick={ () => deleteProductFunction(id) }>
                       <img src={ deleteIcon } alt="Botão de deletar" className="w-11 text-neutral-50" />
+                    </button>
+                  </th>
+                  <th>
+                    <button type="button"onClick={ () => incrementProductFunction(id) } >
+                      <img src={ moreIcon } alt="Botão para incrementar" className="w-11 text-white" />
+                    </button>
+                  </th>
+                  <th>
+                    <button type="button" onClick={ () => decrementProductFunction(id) }>
+                      <img src={ less } alt="Botão de decrementar" className="w-11 text-neutral-50" />
                     </button>
                   </th>
                 </tr>

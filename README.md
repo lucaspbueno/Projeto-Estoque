@@ -13,11 +13,11 @@ Para acessar o projeto em seu navegaor, basta apenas acessar o link abaixo:
 - Insira um email e um nome e pronto!!
 
 ## Pela sua máquina:
-Para acessar o projeto em sua máquina, basta apenas seguir os passos a baixo:
+Para acessar o projeto em sua máquina, basta seguir os passos a baixo:
 - Acesse o terminal e digite o comando:
   - git clone git@github.com:lucaspbueno/Projeto-Estoque.git
   - Se o git do seu pc estiver configurado para tal, ele irá lhe pedir para que insira seu email e senha do github
-- Acesse o  repositório que foi criado em sua máquina, com o comando:
+- Acesse o repositório que foi criado em sua máquina, com o comando:
   - cd Projeto-Estoque
 - Baixe as dependências do projeto com o comando:
   - npm install
